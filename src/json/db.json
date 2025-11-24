@@ -1,0 +1,38 @@
+{
+  "ambulances": [
+    {
+      "id": 1,
+      "name": "Ambulance A1",
+      "status": "available",
+      "latitude": 33.5731,
+      "longitude": -7.5898,
+      "crew": "Team Alpha"
+    },
+    {
+      "id": 2,
+      "name": "Ambulance B2",
+      "status": "on_mission",
+      "latitude": 33.575,
+      "longitude": -7.61,
+      "crew": "Team Bravo"
+    }
+  ],
+  "incidents": [
+    {
+      "id": 1,
+      "address": "Boulevard Zerktouni, Casablanca",
+      "patient": "John Doe",
+      "severity": "critical",
+      "status": "in_progress",
+      "assignedAmbulanceId": 2
+    },
+    {
+      "id": 2,
+      "address": "Ain Diab, Casablanca",
+      "patient": "Jane Smith",
+      "severity": "medium",
+      "status": "pending",
+      "assignedAmbulanceId": null
+    }
+  ]
+}
