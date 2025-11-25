@@ -1,0 +1,27 @@
+{
+  "ambulances": [
+    { "id": 1, "name": "Ambulance 01", "status": "Available", "equipment": ["Defibrillator", "Oxygen"], "crew": ["John", "Emma"], "lat": 33.5903, "lng": -7.6114 },
+    { "id": 2, "name": "Ambulance 02", "status": "In Service", "equipment": ["Oxygen"], "crew": ["Ali", "Sara"], "lat": 33.5950, "lng": -7.6200 },
+    { "id": 3, "name": "Ambulance 03", "status": "Maintenance", "equipment": ["Defibrillator"], "crew": ["Mohamed"], "lat": 33.5880, "lng": -7.6070 },
+    { "id": 4, "name": "Ambulance 04", "status": "Available", "equipment": ["Oxygen", "Defibrillator"], "crew": ["Nora", "Samir"], "lat": 33.5925, "lng": -7.6150 },
+    { "id": 5, "name": "Ambulance 05", "status": "In Service", "equipment": ["Oxygen"], "crew": ["Fatima", "Karim"], "lat": 33.5940, "lng": -7.6180 }
+  ],
+  "incidents": [
+    { "id": 1, "address": "Street A, Casablanca", "patient": "Patient 1", "severity": "Critical", "status": "Pending", "assignedAmbulanceId": null, "lat": 33.5905, "lng": -7.6100, "createdAt": "2025-11-25T08:30:00Z" },
+    { "id": 2, "address": "Street B, Casablanca", "patient": "Patient 2", "severity": "Moderate", "status": "In Progress", "assignedAmbulanceId": 2, "lat": 33.5920, "lng": -7.6130, "createdAt": "2025-11-25T09:00:00Z" },
+    { "id": 3, "address": "Street C, Casablanca", "patient": "Patient 3", "severity": "Minor", "status": "Completed", "assignedAmbulanceId": 1, "lat": 33.5910, "lng": -7.6115, "createdAt": "2025-11-24T14:15:00Z" },
+    { "id": 4, "address": "Street D, Casablanca", "patient": "Patient 4", "severity": "Critical", "status": "Pending", "assignedAmbulanceId": null, "lat": 33.5955, "lng": -7.6170, "createdAt": "2025-11-25T10:20:00Z" },
+    { "id": 5, "address": "Street E, Casablanca", "patient": "Patient 5", "severity": "Moderate", "status": "In Progress", "assignedAmbulanceId": 5, "lat": 33.5930, "lng": -7.6190, "createdAt": "2025-11-25T11:00:00Z" }
+  ],
+  "users": [
+    { "id": 1, "role": "Regulator", "name": "Regulator 1", "email": "reg1@example.com" },
+    { "id": 2, "role": "Regulator", "name": "Regulator 2", "email": "reg2@example.com" },
+    { "id": 3, "role": "Parc Chief", "name": "Parc Chief 1", "email": "chief1@example.com" }
+  ],
+  
+  "activity": [
+    { "id": 1, "action": "Ambulance 2 assigned to Incident 2", "timestamp": "2025-11-25T09:05:00Z" },
+    { "id": 2, "action": "Incident 1 created", "timestamp": "2025-11-25T08:30:00Z" },
+    { "id": 3, "action": "Ambulance 1 status changed to In Service", "timestamp": "2025-11-24T15:00:00Z" }
+  ]
+}
