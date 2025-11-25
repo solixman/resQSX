@@ -34,9 +34,9 @@ async function getKPIs() {
     if (incidents[j].status == "Pending") NIP++;
     if (incidents[j].status == "In Progress") NII++;
   }
+ const MTR="7:50"
 
-console.log( { NAA, NII, NIP })
-  return { NAA, NII, NIP };
+  return { NAA, NII, NIP,MTR };
 }
 
 export default getKPIs;
