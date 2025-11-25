@@ -1,13 +1,21 @@
 // import React from "react";
-import Header from "../componants/comon/Header";
+import { Outlet } from "react-router-dom";
+// import Header from "../components/comon/Header";
+import Footer from "../components/comon/Footer";
 
 
 export default function Dashboard() {
 
   return (
+    <>
+    {/* <Header/> */}
    <main>
-    
-    <Header></Header>
+      <Outlet />
    </main>
+   <div id="footer">
+    <Footer/>
+   
+   </div>
+    </>
   );
 }
