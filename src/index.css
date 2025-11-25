@@ -62,13 +62,29 @@ button:focus-visible {
 }
 
 #logo {
-  max-width: 4vw;
+  margin-top: 4vh ;
+  max-width: 10vw;
+
 }
 #footer {
   bottom: 0;
   left: 0;
   width: 100%;
 }
+
+#header{
+  min-height: 13vh;
+}
+
+#headerActions {
+    margin-top: 4vh ;
+
+}
+
+#kpis {
+  margin-top: 2vw;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -82,7 +98,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
 
 
 @layer base {

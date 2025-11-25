@@ -32,7 +32,7 @@ async function getKPIs() {
   let NIP = 0;
   for (let j = 0; j < incidents.length; j++) {
     if (incidents[j].status == "Pending") NIP++;
-    if (incidents[j].status == "PenIn Progressding") NII++;
+    if (incidents[j].status == "In Progress") NII++;
   }
 
 console.log( { NAA, NII, NIP })
