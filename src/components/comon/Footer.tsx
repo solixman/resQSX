@@ -1,5 +1,6 @@
+import type React from "react"
 
-export default function Footer() {
+const Footer: React.FC = () =>{
   return (
     <>
     <footer className="tracking-wide bg-[#222] pt-12 pb-6 px-10">
@@ -13,3 +14,4 @@ export default function Footer() {
     </>
   )
 }
+export default Footer
