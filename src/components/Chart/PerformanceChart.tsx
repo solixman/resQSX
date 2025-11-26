@@ -21,7 +21,13 @@ ChartJS.register(
   Filler
 );
 
-const PerformanceChart: React.FC = () => {
+interface ChartVariables {
+  AOP: string;
+  IPH: number[];
+}
+
+const PerformanceChart: React.FC<ChartVariables> = ({ AOP, IPH }) => {
+  const max=Math.max(...IPH)
   const data = {
     labels: [
       "01:00",
@@ -39,8 +45,8 @@ const PerformanceChart: React.FC = () => {
     ],
     datasets: [
       {
-        label: "am",
-        data: [5, 6, 8, 0, 7, 5, 3, 2, 8, 5, 9, 6],
+        label: AOP,
+        data: IPH,
         backgroundColor: "rgba(239, 68, 68, 0.2)",
         borderColor: "rgb(239, 68, 68)",
         borderWidth: 2.5,
@@ -84,7 +90,7 @@ const PerformanceChart: React.FC = () => {
     scales: {
       r: {
         beginAtZero: true,
-        max: 10,
+        max: max,
         ticks: {
           color: "rgba(148, 163, 184, 0.6)", // Slate-500
           font: {
@@ -110,8 +116,6 @@ const PerformanceChart: React.FC = () => {
   return (
     <>
       <div className="mt-8 mx-auto  max-w-7xl">
-       
-
         <div className="flex items-center w-full  justify-center">
           <div className="max-w-4xl">
             <Radar data={data} options={options} />

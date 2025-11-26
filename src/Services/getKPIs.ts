@@ -1,3 +1,4 @@
+'useServer'
 import { getAmbulances, getIncidents } from "@/Services/api";
 
 async function getKPIs() {
