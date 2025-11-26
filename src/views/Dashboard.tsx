@@ -1,22 +1,12 @@
-// import React from "react";
-import { Outlet } from "react-router-dom";
-import Header from "../components/comon/Header";
-import Footer from "../components/comon/Footer";
+
+import PerformanceChart from "@/components/Chart/PerformanceChart"
 
 
 export default function Dashboard() {
-
-
-
   return (
-    <>
-    <Header/>
-   <main>
-      <Outlet />
-   </main>
-   <div id="footer">
-    <Footer/>
-   </div>
-    </>
-  );
+    <section>
+        <PerformanceChart/>
+        
+    </section>
+  )
 }
