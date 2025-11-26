@@ -24,34 +24,43 @@ ChartJS.register(
 const PerformanceChart: React.FC = () => {
   const data = {
     labels: [
-      "01:00", "02:00", "03:00", "04:00", "05:00", "06:00",
-      "07:00", "08:00", "09:00", "10:00", "11:00", "12:00",
+      "01:00",
+      "02:00",
+      "03:00",
+      "04:00",
+      "05:00",
+      "06:00",
+      "07:00",
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
     ],
     datasets: [
       {
-        label: "Incidents par Heure",
+        label: "am",
         data: [5, 6, 8, 0, 7, 5, 3, 2, 8, 5, 9, 6],
-        // Rouge pour symboliser la charge de travail (Incidents)
-        backgroundColor: "rgba(239, 68, 68, 0.2)", // Rouge transparent
-        borderColor: "rgb(239, 68, 68)", // Rouge vif (Red-600)
+        backgroundColor: "rgba(239, 68, 68, 0.2)",
+        borderColor: "rgb(239, 68, 68)",
         borderWidth: 2.5,
         pointBackgroundColor: "rgb(239, 68, 68)",
-        pointBorderColor: "rgb(30, 41, 59)", // bg-slate-900 (pour le contraste)
+        pointBorderColor: "rgb(30, 41, 59)",
         pointBorderWidth: 2,
         pointRadius: 5,
         pointHoverRadius: 7,
-        pointHoverBackgroundColor: "rgb(220, 38, 38)", // Rouge plus foncé
+        pointHoverBackgroundColor: "rgb(220, 38, 38)",
       },
     ],
   };
-const options:any = {
+  const options: any = {
     responsive: true,
     maintainAspectRatio: true,
     plugins: {
       legend: {
         display: true,
         labels: {
-          color: "rgb(203, 213, 225)", // Slate-300
+          color: "rgb(203, 213, 225)",
           font: {
             size: 13,
             weight: 600,
@@ -100,19 +109,15 @@ const options:any = {
 
   return (
     <>
-   <div  className="mt-8 mx-auto w-full max-w-7xl">
-    <div className="bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8">
-        <h2 className="text-2xl font-bold text-gray-100 mb-6 border-b border-gray-700 pb-3">
-            🎯 Performance Analysis: Incident Load by Hour
-        </h2>
-        
-        <div  className="flex items-center w-full min-h-[450px] justify-center">
-            <div id="chart" className="max-w-4xl">
-                <Radar data={data} options={options} />
-            </div>
+      <div className="mt-8 mx-auto  max-w-7xl">
+       
+
+        <div className="flex items-center w-full  justify-center">
+          <div className="max-w-4xl">
+            <Radar data={data} options={options} />
+          </div>
         </div>
-    </div>
-</div>
+      </div>
     </>
   );
 };
