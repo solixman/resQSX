@@ -15,11 +15,11 @@ interface kpis {
   NAA: number;
   NII: number;
   NIP: number;
+  MTR: string;
 }
 
 const Header: React.FC = () => {
   const [KPIs, setKPIs] = useState<kpis | null>(null);
-
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
       .catch((err) => setError(err));
   }, []);
 
-  if (error != null)
+  if (error !== null)
     return (
       <>
         <div> something went wrong, please contact the developer</div>
@@ -81,8 +81,8 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2">
             <span className="text-sm font-semibold text-slate-300">
-              MTR: 7:44 min
-            </span>
+              MTR: {KPIs?.MTR}m
+            </span> 
           </div>
         </div>
 

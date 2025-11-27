@@ -1,3 +1,4 @@
+'useServer'
 import { getAmbulances, getIncidents } from "@/Services/api";
 
 async function getKPIs() {
@@ -19,7 +20,7 @@ async function getKPIs() {
       return err;
     });
 
-    console.log(ambulances)
+
 
     let NAA = 0;
     for (let index = 0; index < ambulances.length; index++) {
@@ -34,9 +35,9 @@ async function getKPIs() {
     if (incidents[j].status == "Pending") NIP++;
     if (incidents[j].status == "In Progress") NII++;
   }
+ const MTR="7:50"
 
-console.log( { NAA, NII, NIP })
-  return { NAA, NII, NIP };
+  return { NAA, NII, NIP,MTR };
 }
 
 export default getKPIs;
