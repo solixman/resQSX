@@ -27,7 +27,7 @@ interface ChartVariables {
 }
 
 const PerformanceChart: React.FC<ChartVariables> = ({ AOP, IPH }) => {
-  const max=Math.max(...IPH)
+  const max = Math.max(...IPH);
   const data = {
     labels: [
       "01:00",
@@ -59,7 +59,7 @@ const PerformanceChart: React.FC<ChartVariables> = ({ AOP, IPH }) => {
       },
     ],
   };
-  const options: any = {
+  const options = {
     responsive: true,
     maintainAspectRatio: true,
     plugins: {
@@ -76,15 +76,15 @@ const PerformanceChart: React.FC<ChartVariables> = ({ AOP, IPH }) => {
         },
       },
       tooltip: {
-        backgroundColor: "rgba(15, 23, 42, 0.95)", // Slate-900
-        borderColor: "rgb(239, 68, 68, 0.5)",
+        backgroundColor: "rgba(15, 23, 42, 0.95)",
+        borderColor: "rgba(239, 68, 68, 0.5)",
         borderWidth: 1.5,
         titleColor: "rgb(239, 68, 68)",
         bodyColor: "rgb(203, 213, 225)",
         padding: 12,
         displayColors: false,
-        titleFont: { size: 14, weight: "bold" },
-        bodyFont: { size: 13 },
+        titleFont: { size: 14, weight: "bold" as const }, 
+        bodyFont: { size: 13, weight: "normal" as const },
       },
     },
     scales: {
@@ -92,18 +92,18 @@ const PerformanceChart: React.FC<ChartVariables> = ({ AOP, IPH }) => {
         beginAtZero: true,
         max: max,
         ticks: {
-          color: "rgba(148, 163, 184, 0.6)", // Slate-500
+          color: "rgba(148, 163, 184, 0.6)",
           font: {
             size: 12,
           },
           backdropColor: "transparent",
         },
         grid: {
-          color: "rgba(71, 85, 105, 0.3)", // Slate-700
+          color: "rgba(71, 85, 105, 0.3)",
           lineWidth: 1.2,
         },
         pointLabels: {
-          color: "rgb(226, 232, 240)", // Slate-200
+          color: "rgb(226, 232, 240)",
           font: {
             size: 12,
             weight: 500,

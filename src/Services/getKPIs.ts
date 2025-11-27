@@ -20,7 +20,7 @@ async function getKPIs() {
       return err;
     });
 
-    console.log(ambulances)
+
 
     let NAA = 0;
     for (let index = 0; index < ambulances.length; index++) {

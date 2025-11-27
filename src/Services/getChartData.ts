@@ -13,7 +13,6 @@ export default async function getChartData() {
   const incidentsPerHour = new Array(24).fill(0);
   incidents.forEach((incident) => {
     const hour = new Date(incident.createdAt).getHours();
-    console.log(hour)
     incidentsPerHour[hour] = (incidentsPerHour[hour] || 0) + 1;
   });
 
